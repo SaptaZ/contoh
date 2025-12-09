@@ -1,1 +1,360 @@
-tes
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XDEV PROJECT</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <meta property="og:title" content="EWAA XDEV PROJECT - Jual File FF Premium">
+    <meta property="og:description" content="Sedia file hologram, cacheres, dan jasa unlock akun Free Fire. Harga termurah dan terupdate.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://api.nekolabs.web.id/f/image-1.jpg">
+    <style>
+        /* --- BAGIAN CSS (TAMPILAN) --- */
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1a1a24;
+            --primary-neon: #00ffcc; /* Warna Neon Utama (Cyan) */
+            --secondary-neon: #ff0055; /* Warna Neon Kedua (Merah Pink) */
+            --text-color: #ffffff;
+            --text-secondary: #b3b3b3;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 480px; 
+            width: 100%;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        header h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 0 10px var(--primary-neon);
+            /* FIX: Agar Logo dan Teks Rata Tengah */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.2;
+        }
+
+        /* --- CSS Logo Header yang Diperbaiki --- */
+        .header-logo {
+            width: 40px; 
+            height: 40px; 
+            margin-right: 10px;
+            filter: drop-shadow(0 0 8px var(--primary-neon));
+            border-radius: 50%;
+        }
+        /* ------------------------------------------- */
+
+        header .sub-title {
+            color: var(--primary-neon);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Kartu Produk */
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-neon);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+        }
+
+        /* Warna Garis Pinggir Tiap Kategori */
+        .card.hologram::before { background: #00e5ff; box-shadow: 0 0 10px #00e5ff; }
+        .card.cacheres::before { background: #ff2a2a; box-shadow: 0 0 10px #ff2a2a; }
+        .card.jasa::before { background: #ae00ff; box-shadow: 0 0 10px #ae00ff; }
+
+        .card-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hologram .card-title { color: #00e5ff; }
+        .cacheres .card-title { color: #ff2a2a; }
+        .jasa .card-title { color: #ae00ff; }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px 0; 
+            border-bottom: 1px solid #2a2a35;
+            display: flex; 
+            align-items: center;
+            font-size: 14px;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Nama Produk dan Icon */
+        .product-name {
+            display: flex;
+            align-items: center;
+            flex-grow: 1; 
+        }
+
+        .product-name i {
+            margin-right: 10px;
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+        
+        /* Harga Produk */
+        .product-price {
+            margin-left: auto;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            color: var(--secondary-neon); 
+            font-size: 15px;
+            padding-left: 10px; 
+            text-shadow: 0 0 5px rgba(255, 0, 85, 0.5); 
+        }
+
+
+        .footer-note {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            font-style: italic;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        /* Box Catatan Penting */
+        .note-box {
+            background: linear-gradient(45deg, #1a1a24, #252530);
+            border: 1px dashed var(--primary-neon);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .note-box strong {
+            color: var(--primary-neon);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Tombol */
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .btn-wa {
+            background: linear-gradient(90deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+        }
+        
+        .btn-wa:hover {
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+            transform: scale(1.02);
+        }
+
+        .btn-channel {
+            background: transparent;
+            border: 2px solid #555;
+            color: #ddd;
+        }
+
+        .btn-channel:hover {
+            border-color: var(--primary-neon);
+            color: var(--primary-neon);
+            background: rgba(0, 255, 204, 0.05);
+        }
+
+        /* Footer Copyright */
+        .credit {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>
+                <img src="https://api.nekolabs.web.id/f/image.jpg" class="header-logo" alt="Logo">
+                List Harga File/Jasa☄️
+            </h1>
+            <div class="sub-title"> EWAA XDEV PROJECT V1</div>
+        </header>
+        <section class="card hologram">
+            <div class="card-title">
+                <i class="fas fa-folder-open"></i> FILE HOLOGRAM <span style="font-size: 12px; opacity: 0.7; margin-left:auto">[NO ROOT]</span>
+            </div>
+            <ul>
+                <li>
+                    <span class="product-name"><i class="fas fa-crosshairs"></i> Holo Senjata</span>
+                    <span class="product-price">10K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-tshirt"></i> Holo Bundle</span>
+                    <span class="product-price">10K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-user-ninja"></i> Holo Char/WP/BD (Bisa Smooth)</span>
+                    <span class="product-price">35K</span>
+                </li>
+            </ul>
+            <div class="footer-note">
+                <i class="fas fa-info-circle"></i> Free Req Warna. Use PC (UABE/ASTU)
+            </div>
+        </section>
+
+        <section class="card cacheres">
+            <div class="card-title">
+                <i class="fas fa-cogs"></i> FILE CACHERES <span style="font-size: 12px; opacity: 0.7; margin-left:auto">[ROOT]</span>
+            </div>
+            <ul>
+                <li>
+                    <span class="product-name"><i class="fas fa-skull"></i> Drag HS 100%</span>
+                    <span class="product-price">40K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-bullseye"></i> Leher HS</span>
+                    <span class="product-price">40K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-heart"></i> Dada HS</span>
+                    <span class="product-price">40K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-child"></i> Badan HS</span>
+                    <span class="product-price">40K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-magic"></i> Magic Bullet</span>
+                    <span class="product-price">20K</span>
+                </li>
+            </ul>
+            <div class="footer-note">
+                <i class="fas fa-video"></i> With Showcase in Tools. Free Req Value.
+            </div>
+        </section>
+
+        <section class="card jasa">
+            <div class="card-title">
+                <i class="fas fa-desktop"></i> OPEN JASA <span style="font-size: 12px; opacity: 0.7; margin-left:auto">[ALL DEVICE]</span>
+            </div>
+            <ul>
+                <li>
+                    <span class="product-name"><i class="fas fa-eraser"></i> Hapus Holo SS00</span>
+                    <span class="product-price">10K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-palette"></i> Add Color Holo</span>
+                    <span class="product-price">10K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-sync-alt"></i> Change Color Holo</span>
+                    <span class="product-price">5K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-image"></i> Add Gambar Glowal</span>
+                    <span class="product-price">5K</span>
+                </li>
+                <li>
+                    <span class="product-name"><i class="fas fa-paint-brush"></i> Change Color Glowal</span>
+                    <span class="product-price">5K</span>
+                </li>
+            </ul>
+            <div class="footer-note">
+                <i class="fas fa-check-circle"></i> Free Add Credits in Dump. Use PC (UABE/ASTU).
+            </div>
+        </section>
+
+        <div class="note-box">
+            <strong><i class="fas fa-gift"></i> BONUS PEMBELIAN:</strong>
+            • Free Akses Permanen <br>
+            • Update FF di kasih Holo New <br>
+            • Gratis Update buat Member <br>
+            • Free Tutor Carpas via VC/ShareScreen <br>
+            • Free Join GB Private 🥷
+        </div>
+
+        <a href="https://wa.me/6289653880942?text=Halo%20bang,%20mau%20order%20file%20FF" class="btn btn-wa">
+            <i class="fab fa-whatsapp" style="margin-right: 10px; font-size: 18px;"></i>
+            BUY NOW / PM @EWAA
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbCI34V2ZjCpOdI5Hc0e" class="btn btn-channel">
+            <i class="fas fa-rss" style="margin-right: 10px;"></i>
+            JOIN SALURAN UPDATE
+        </a>
+
+        <div class="credit">
+            &copy; 2024 Ewaa Store. All Rights Reserved.
+        </div>
+
+    </div>
+</body>
+</html>
